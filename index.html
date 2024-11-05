@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YouTube Kids Research Project</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+    <body>
+        <!-- Masthead Navigation -->
+        <header class="masthead">
+            <div class="logo">YouTube Kids Research</div>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="This is purely for aesthetics..." />
+                <button onclick="performSearch()">Search</button>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <header class="hero">
+                <h1>YouTube Kids Age Group Research</h1>
+                <p>Examining content differences among age categories 4 and under, 5-8, and 9-12.</p>
+            </header>
+
+            <!---Navigation Secton-->
+            <section class="yup">
+                <a href="#intro" id="first" class="icon"> Introduction </a>
+
+                <a href="#lit-review" class="icon"> Literature Review</a>
+                <a href="#data-collection" class="icon"> Data Collection</a>
+                <a href="#data-analysis" class="icon"> Data Analysis</a>
+                <a href="#discussion" class="icon"> Discussion</a>
+                <a href="#conclusion" class="icon"> Conclusion</a>
+            </section>
+            <!-- Section: Introduction -->
+            <section id="intro" class="section">
+                <h2>Introduction & Motivation</h2>
+                <p>
+                    Why is it essential to audit digital platforms like YouTube Kids? This section discusses motivations
+                    and potential biases based on Noble's work...
+                </p>
+            </section>
+
+            <!-- Section: Literature Review -->
+            <section id="lit-review" class="section">
+                <h2>Literature Review and Research Questions</h2>
+                <div class="timeline">
+                    <div class="timeline-event">
+                        <p><strong>Study 1:</strong> Summary of the first study.</p>
+                    </div>
+                    <div class="timeline-event">
+                        <p><strong>Study 2:</strong> Summary of the second study.</p>
+                    </div>
+                </div>
+                <h3>Research Questions</h3>
+                <p>Does YouTube Kids content for each age category promote educational values?</p>
+            </section>
+
+            <!-- Section: Data Collection -->
+            <section id="data-collection" class="section">
+                <h2>Data Collection</h2>
+                <p>This section provides an overview of how data was gathered...</p>
+                <button onclick="openDataRepo()">View Data Repository</button>
+            </section>
+
+            <!-- Section: Data Analysis -->
+            <section id="data-analysis" class="section">
+                <h2>Data Analysis</h2>
+                <div id="data-visualization">Data visualizations would go here.</div>
+                <p>Interpretation of the findings in relation to content types, engagement, etc.</p>
+            </section>
+
+            <!-- Section: Discussion -->
+            <section id="discussion" class="section">
+                <h2>Discussion</h2>
+                <p>Examining findings through a critical lens, including considerations from Data Feminism.</p>
+            </section>
+
+            <!-- Section: Conclusion -->
+            <section id="conclusion" class="section">
+                <h2>Conclusion & Recommendations</h2>
+                <p>Recommendations for future actions or further research.</p>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>
