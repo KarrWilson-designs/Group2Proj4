@@ -37,3 +37,19 @@ function openDataRepo() {
         image.style.display = "block";
     });
 }
+// very unimportant but fun search button function. Source: ChatGPT
+function performSearch() {
+    const query = document.getElementById("search").value;
+    const searchTerms = ["intro", "lit-review", "data", "discussion", "conclusion"];
+
+    //if the search term is not included in the above list of terms
+    if (!searchTerms.includes(query)) {
+        alert("I meant it when I said this was for aesthetics... Please enter a search term tho.");
+    }
+    // if search query is included
+    else {
+        alert(
+            `I meant it when I said this was for aesthetics... If you're searching for: ${query}, scroll down/click the related button`
+        );
+    }
+}
