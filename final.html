@@ -1,0 +1,328 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>YouTube Kids Research Project</title>
+        <link rel="stylesheet" href="styles(final).css" />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    </head>
+    <body>
+        <!-- Masthead Navigation -->
+        <header class="masthead">
+            <div class="logo">YouTube Kids Research</div>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="This is purely for aesthetics..." />
+                <button onclick="performSearch()">Search</button>
+            </div>
+            <div class="subtitle">
+                Created by: Kenneth, Karrington & Evie. <br />
+                Some aid provided by Google Collab and ChatGPT
+            </div>
+        </header>
+
+        <!-- Main Content -->
+
+        <section class="navigation">
+            <button class="All" onclick="showTitleCards()">All</button>
+            <button class="intro" onclick="showDiv('intro')">Intro</button>
+            <button class="lit-review" onclick="showDiv('lit-review')">Literature Review</button>
+            <button class="data-collection" onclick="showDiv('data-collection')">Data Collection</button>
+            <button class="data-analysis" onclick="showDiv('data-analysis')">Data Analysis</button>
+            <button class="discussion" onclick="showDiv('discussion')">Discussion</button>
+            <button class="conclusion" onclick="showDiv('conclusion')">Conclusion</button>
+        </section>
+
+        <!--Title Cards-->
+        <section class="titleCards">
+            <div class="mainBits">
+                <img src="sectionIMG/1.png" class="intro" onclick="showDiv('intro')" />
+            </div>
+            <div class="mainBits">
+                <img src="sectionImg/2.png" class="lit-review" onclick="showDiv('lit-review')" />
+            </div>
+            <div class="mainBits">
+                <img src="sectionImg/3.png" class="data-collection" onclick="showDiv('data-collection')" />
+            </div>
+            <div class="mainBits">
+                <img src="sectionImg/4.png" class="data-analysis" onclick="showDiv('data-analysis')" />
+            </div>
+            <div class="mainBits">
+                <img src="sectionImg/5.png" class="discussion" onclick="showDiv('discussion')" />
+            </div>
+            <div class="mainBits">
+                <img src="sectionImg/6.png" class="conclusion" onclick="showDiv('conclusion')" />
+            </div>
+        </section>
+
+        <!--Main Section-->
+        <main>
+            <section id="intro" class="hidden">
+                <h2>Introduction & Motivation</h2>
+                <p>
+                    We often have the perception that the technologies we engage with are neutral, when in reality, they
+                    reflect the biases of their makers and the users who engage with them. This phenomenon was precisely
+                    detailed in Dr. Safiya Noble’s book Algorithms of Oppression: How Search Engines Reinforce Racism,
+                    where she did an audit of search engines to examine the biases they held. When searching Google for
+                    terms like “black girls”, she was stunned to see mostly sexual content. And when she attempted to
+                    search “why are black women so…”, she encountered mostly negative and stereotypical auto-complete
+                    results. Noble’s findings were extremely significant, as they challenged the notion that search
+                    engines were inherently neutral. Social media algorithms, like search engines, are encoded with
+                    biases and have potential to create harm if they are left unchecked. <br />
+                    <br />
+                    The focus of our project is auditing the YouTube Kids platform, which is a version of YouTube with
+                    content solely targeted for children. YouTube Kids claims that it does not allow creators to
+                    self-select their videos to appear on the platform, and that videos are selected by humans and by
+                    the algorithm to curate a safer experience for children on the web. However, this video selection
+                    process is imperfect, and videos can slip through the cracks that are not meant for children or,
+                    even worse, are harmful for children to engage with. By performing an audit of YouTube Kids, we hope
+                    to get a sense of how prevalent the dangers of children coming into contact with age-inappropriate
+                    or harmful content actually are.
+                </p>
+            </section>
+
+            <!-- Section: Literature Review -->
+            <section id="lit-review" class="hidden">
+                <h2>Literature Review and Research Questions</h2>
+                <h3>Research Questions</h3>
+                <p>
+                    There has been a substantial amount of research on how children interact with social media, with
+                    YouTube and YouTube Kids being a significant point of interest. Interestingly, more parents make the
+                    decision to allow their children to use YouTube rather than the dedicated YouTube Kids platform (Pew
+                    Research Center 2023). Nevertheless, there are a whopping 33 million children on YouTube Kids,
+                    meaning that the potential impact of videos on this platform, be it positive or negative, is
+                    astounding (Durañona 2023). The driving factor behind choosing YouTube Kids over the general YouTube
+                    app is the additional protection it provides the child user. Not only is the content on the platform
+                    monitored to be kid-friendly, but the advertisements are also very heavily regulated. YouTube claims
+                    that companies are not allowed to deliberately target children for their advertisements, and that no
+                    placement-based advertising is conducted on YouTube Kids. However, in a study conducted by Medjkoune
+                    et al., a group of researchers were able to carry out a fake advertising campaign in which they
+                    successfully targeted children viewers. Additionally, in an audit of the advertisements on YouTube
+                    Kids, they came across ads that were targeted based on the content of the video the ad was attached
+                    to, refuting the claim that no placement-based advertising is allowed on YouTube Kids (Medjkoune et
+                    al. 2023). <br /><br />
+
+                    Unfortunately, that is only the beginning of the potential harms that can exist on YouTube Kids. A
+                    study by Tahir et al. in 2019 demonstrated that YouTube Kids contains a large body of inappropriate
+                    content. This is not limited to just the videos themselves, but the comment sections as well – as a
+                    study from Alshamrani et al. found evidence for both harmful content in comments (including hateful
+                    or racist speech) as well as links to malware. As children got older, the risk of them encountering
+                    this harmful content only increased (Alshamrani et al. 2020, Alshamrani et al. 2021).<br /><br />
+
+                    Given that former audits have already come across some potential harms in the YouTube Kids platform,
+                    we think that further auditing would prove fruitful. Though there is a large body of research on the
+                    effects that YouTube and YouTube Kids have on children, there is very little on how the content
+                    presented on YouTube Kids varies based on age group. YouTube Kids sorts its users into three
+                    different demographic groups based on age – children 4 and below, children 5-8, and children 9-12
+                    (Burroughs 2017). Therefore, in our audit of YouTube Kids, our research focus will concern how the
+                    content presented to children varies based on their age group. We hypothesize that as children get
+                    older, they are more likely to encounter age-inappropriate content even on the allegedly
+                    kid-friendly YouTube Kids app.
+                </p>
+            </section>
+
+            <!-- Section: Data Collection -->
+            <section id="data-collection" class="hidden">
+                <h2>Data Collection</h2>
+                <p>
+                    Video of Scraping Script:
+                    <a href="https://drive.google.com/file/d/1MCY02Uge0dt7eBLsOv7jc301fFa7YFZk/view?usp=sharing"
+                        >Here</a
+                    >
+                    <br />
+
+                    Our primary source of data was a Python script that we used to scrape the recommended page of
+                    YouTube Kids. We had to use Selenium to navigate and interact with the setup prompts that appeared
+                    every single time we opened YouTube Kids. These prompts included selecting the age group to show
+                    videos from, parental age verification, and agreeing to the terms of services. After navigating
+                    through these prompts, we used Beautiful Soup to scrape the recommendation page for every video’s
+                    title, runtime, and ID. <br />
+                    <br />
+
+                    Data was collected three times a day for each age group (preschool, younger, older) over the span of
+                    about three days. During this collection period, our script was able to scrape 360 recommended
+                    videos from the preschool age group, 288 videos from the younger age group, and 254 videos from the
+                    older age group. This imbalance in data from each group can be attributed to two factors. The first
+                    factor is that we tested/debugged the script using the preschool age group. Successful runs from our
+                    debugging were also included in the data. The second reason is simply the nature of the web-scaping
+                    script. It scrapes each age group sequentially starting with preschool and ending with older. On the
+                    occasions where the script crashed due to network or other issues, it is more likely that data for
+                    the older age group did not get collected since it was last.<br />
+                    <br />
+
+                    The other data that we collected was qualitative data about the content of each video. We did this
+                    two ways. The first was randomly sampling videos from each batch of data we collected and reading
+                    the titles or watching them to give us a coarse but accurate understanding of the content being
+                    shown. The other method was by using chatGPT-4o to categorize every video into four categories:
+                    Educational Content, Children's Cartoons & Shows, Music & Dance, and Other. When prompted for its
+                    methodology for categorizing videos, it returned this response: Keyword-Based Matching: Each video
+                    title was analyzed for keywords that suggest a specific category. Here’s how I assigned each
+                    category based on keywords commonly found in the title:<br />
+                    <br />
+                    • Educational Content: Titles with words like "learn," "education," "school," "ABC," "read," "baby,"
+                    "toddlers," or "classroom" were classified as educational. These words indicate content aimed at
+                    teaching children basic skills, such as reading, counting, or other preschool topics.<br />
+                    • Children's Cartoons & Shows: This category includes keywords like "cartoon," "toon," "episode,"
+                    "animated," and names of popular children’s characters (e.g., "Peppa," "Bluey," "SpongeBob,"
+                    "Fixie," and "Disney"). Titles containing these keywords were considered entertainment-oriented
+                    shows or cartoons for kids.<br />
+                    • Music & Dance: This category included keywords like "song," "music," "dance," "party,"
+                    "compilation," and "marathon." Titles with these words often involve musical or dance compilations
+                    aimed at engaging children through songs and performances. <br />
+                    • Other: Any title that didn’t match the above keywords was classified as "Other." This category is
+                    a catch-all for content that doesn't clearly fall into educational, cartoon, or musical themes.<br />
+                    <br />
+                    Note: The other category can be treated as the brain rot category. It includes random reels,
+                    influencer content, and other random videos that we would say rots the brain.<br />
+                    <br />
+
+                    The ChatGPT-generated data provides fine-grained information about each video but is not as reliable
+                    as our own intuition. In general, it works but there are still many miscategorized videos. With this
+                    data, we created two visualizations showing the distribution of video runtimes for each age group
+                    and the distribution of videos by category for each age group.
+                </p>
+                <button onclick="openDataRepo()">View Data Repository</button>
+                <img src="kenneths-data-vis-jpg.jpg" alt="Length of Reccommended Videos per Age" class="data-vis-img" />
+                <img src="kenneths-data-vis-2.jpg" alt="Categorized Videos for Each Age" class="data-vis-img" />
+                <embed
+                    type="text/html"
+                    title="dataVis1"
+                    src="category.html"
+                    width="800"
+                    height="600"
+                    class="data-vis-img"
+                    id="dataVisInt0" />
+                <embed
+                    type="text/html"
+                    title="dataVis2"
+                    src="run_time_interactive_html.html"
+                    width="800"
+                    height="600"
+                    class="data-vis-img"
+                    id="dataVisInt1" />
+            </section>
+
+            <!-- Section: Data Analysis -->
+            <section id="data-analysis" class="hidden">
+                <h2>Data Analysis</h2>
+                <div id="data-visualization">Data visualizations would go here.</div>
+                <p>Interpretation of the findings in relation to content types, engagement, etc.</p>
+            </section>
+
+            <!-- Section: Discussion -->
+            <section id="discussion" class="hidden">
+                <h2>Discussion</h2>
+                <p>
+                    The data we have collected during our audit was enlightening as we noticed some prevalent trends
+                    occur. For starters, it is important to note that there is significantly more content moderation on
+                    YouTube kids than on YouTube. This is prevalent as there is no comment section on the platform as
+                    well as further moderation of inappropriate content for children. While this is good, there are
+                    noticeable flaws in the system’s algorithm. <br /><br />As you can see in the second data
+                    visualization, there are four main categories of videos that appear the most on the platform:
+                    Children’s Cartoons and Shows, Educational, Music & Dance, and Other. There is a high percentage of
+                    cartoons and shows that are filtered toward the preschool (ages 4 & under) and older (ages 9-12) age
+                    ranges. The appearance of the videos occurs at a greater rate than educational and music videos. To
+                    us, this may reflect an algorithmic bias toward entertainment over educational content, which can
+                    significantly impact the development and learning outcomes of the younger generations. This trend is
+                    reminiscent of Noble’s Algorithms of Oppression as the author highlights how algorithms, especially
+                    of larger corporations like Google, often prioritize capitalist and commercial interests. Seemingly,
+                    the priority of YouTube and its subsidiaries is to keep users engaged and for as long as possible in
+                    order to generate additional revenue. Noble also talks about how algorithms can perpetuate social
+                    biases. While YouTube kids primarily shows children’s shows - which don't necessarily enforce
+                    negative biases on its surface - the pushing of this content over educational content may keep its
+                    users from seeking out new perspectives, therefore potentially allowing young users to retain biases
+                    from their environment without challenge or further exploration. In another vein, children from
+                    marginalized communities may continue to ingest content that does not properly represent their
+                    identities or interests, if at all, potentially impacting their self esteem or confidence
+                    negatively. <br /><br />
+                    Based on the first data visualization, we saw that the length of videos on the platform are
+                    typically short-form for all age groups. We also saw that the younger age group (ages 5-8) were
+                    suggested longer videos, most prominently around 8 hours. In the age of short-form social media like
+                    TikTok, Instagram, and Snapchat, it is not completely surprising that YouTube kids showed this same
+                    type of content. What is concerning, however, is the potential impact of this trend. For starters,
+                    the extremely long content shown to the younger age group alludes to overindulgent screen time which
+                    is not ideal for youth development. Next, the recurrence of short form content is reminiscent of
+                    Data Feminism. These types of videos allude to an algorithmic design which prioritizes user
+                    interaction and watch time over proper child development. On platforms that have short form content,
+                    users typically spend more time scrolling through as the content is quick, easy to digest and easy
+                    to move on from.<br /><br />
+                    Static consumption is not great for younger people as this age should be spent going outside,
+                    playing and interacting with others, and learning educational content. Both Data Feminism and
+                    Algorithms of Oppression highlight the potential downsides of capitalist algorithmic expansion and
+                    rings especially true when it comes to vulnerable populations like the children users on YouTube
+                    kids.
+                </p>
+            </section>
+
+            <!-- Section: Conclusion -->
+            <section id="conclusion" class="hidden">
+                <h2>Conclusion & Recommendations</h2>
+                <p>
+                    The development of YouTube Kids, which aims to protect children from placement-based advertising and
+                    harmful content, is already a step in the right direction. On the surface level, the platform
+                    functions as intended. In our initial audit of all three age groups, we saw very standard children’s
+                    content – reruns of Bluey, videos of animal facts, and even a hamster making its way through a
+                    brightly colored maze. These videos remained largely the same regardless of the age group we
+                    audited. However, when we revisited the YouTube Kids platform and utilized its search function, the
+                    selection of videos changed dramatically. Not only were we able to access videos targeted towards
+                    older children and adults, including creators like Mr. Beast, but these sorts of videos then began
+                    to emerge in our ‘Recommended’ pages as well. <br />
+                    <br />
+                    Additionally, after we used the search function, we received more videos in our Recommended pages.
+                    When we performed our initial audit before we had used the search function, YouTube Kids recommended
+                    36 videos on their homepages for each age group. After using the search function, we counted 60
+                    videos on each homepage. This search function could pose a large issue, as children could use it to
+                    seek out age-inappropriate content that has not been properly vetted by YouTube, and then receive
+                    more such content on their Recommended pages.<br />
+                    <br />
+                    To rectify this issue, we suggest that the Recommended pages on YouTube Kids should not be
+                    personalized to reflect the former searches of child users. Instead, we argue that these pages
+                    should only contain videos deliberately curated by humans to be kid-friendly. Additionally, we think
+                    that these recommendations should vary based on the age group of the child user. Children aged 9-12
+                    would understandably not be attracted to content targeted at children aged four and under, and vice
+                    versa. Thus, their recommendations YouTube Kids provides for them should vary based on their age.
+                    Hopefully, providing children with age-appropriate and engaging content that was curated by human
+                    beings on the Recommended home page would require them to use the search function less, therefore
+                    protecting them from potentially inappropriate content. <br />
+                    <br />
+                    Lastly, and perhaps most importantly, we believe that YouTube Kids could stand to improve the
+                    filters it uses to assess what content is targeted for children, though we acknowledge that this is
+                    much easier said than done.
+
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    Sources Cited <br />
+                    <br />
+                    B. Burroughs. 2017. “YouTube Kids: The App Economy and Mobile Parenting”, Social Media + Society,
+                    3(2). <br />
+                    D. Pablo. 2023. “YouTube or YouTube Kids? Reaching the right audience effectively and safely.”
+                    Kidscorp.
+                    https://www.kidscorp.digital/resources/blog/youtube-or-youtube-kids-reaching-the-right-audience-effectively-and-safely
+                    <br />
+                    Pew Research Center. 2023. “Many Turn to YouTube for Children's Content”, News, How-To Lessons.
+                    https://www.pewresearch.org/internet/2018/11/07/many-turn-to-youtube-for-childrens-content-news-how-to-lessons/
+                    <br />
+                    R. Tahir, F. Ahmed, H. Saeed, S. Ali, F. Zaffar, and C. Wilson, “Bringing the kid back into youtube
+                    kids: Detecting inappropriate content on video streaming platforms,” in IEEE/ACM International
+                    Conference on Advances in Social Networks Analysis and Mining, 2019.<br />
+                    S. Alshamrani, A. Abusnaina and D. Mohaisen, "Hiding in Plain Sight: A Measurement and Analysis of
+                    Kids’ Exposure to Malicious URLs on YouTube," 2020 IEEE/ACM Symposium on Edge Computing (SEC), San
+                    Jose, CA, USA, 2020, pp. 321-326, doi: 10.1109/SEC50012.2020.00046.<br />
+                    S. Alshamrani. 2020. “Detecting and Measuring the Exposure of Children and Adolescents to
+                    Inappropriate Comments in YouTube.” In Proceedings of the 29th ACM International Conference on
+                    Information & Knowledge Management (CIKM '20). Association for Computing Machinery, New York, NY,
+                    USA, 3213–3216. https://doi.org/10.1145/3340531.3418511 <br />T. Medjkoune, O. Goga, and J.
+                    Senechal. 2023. “Marketing to Children Through Online Targeted Advertising: Targeting Mechanisms and
+                    Legal Aspects.” In Proceedings of the 2023 ACM SIGSAC Conference on Computer and Communications
+                    Security (CCS '23). Association for Computing Machinery, New York, NY, USA, 180–194.
+                </p>
+            </section>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

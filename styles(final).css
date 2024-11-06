@@ -1,0 +1,146 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Masthead Navigation */
+.masthead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    padding: 10px 20px;
+    border-bottom: 2px solid #ccc;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ff9831;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #ff9831;
+}
+
+.search-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container input {
+    padding: 5px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.search-container button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #ff0808;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #bf0000;
+}
+
+/* Navigation Icons */
+
+.navigation {
+    display: flex;
+    padding-left: 20%;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    gap: 10px;
+}
+.navigation button {
+    border-radius: 25px;
+    background: #ff3131;
+    padding: 20px;
+    width: 120px;
+    height: 80px;
+    text-align: center;
+    align-content: center;
+
+    flex-direction: row;
+}
+
+.titleCards {
+    padding-left: 60px;
+    column-gap: 20px;
+    row-gap: 20px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.titleCards img {
+    max-width: 400px;
+}
+
+/* Main Content */
+.hidden {
+    display: none;
+    margin: 20px;
+    background-color: #f9f9f9; /* Light background for readability */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333; /* Dark text for readability */
+}
+/* Headers in hidden divs */
+.hidden h2 {
+    color: #ff9831; /* Matches the logo color */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align-last: center;
+}
+
+.hidden p {
+    margin-bottom: 15px;
+    padding: 20px;
+}
+
+/* Image Content */
+.data-vis-img {
+    display: none;
+}
+
+#dataVisInt0 {
+    padding: 20px;
+}
+#dataVisInt1 {
+    padding: 20px;
+}
+
+/* Button Style */
+button {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
