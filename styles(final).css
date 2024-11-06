@@ -3,26 +3,30 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Pixelify Sans;
 }
 
 /* Body Styling */
 body {
-    font-family: Arial, sans-serif;
+    cursor: url(youtube.png), auto;
+    background-color: #ff9349;
 }
+
+/* Mouse Cursors */
 
 /* Masthead Navigation */
 .masthead {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #f9f9f9;
+    background-color: #ff3131;
     padding: 10px 20px;
     border-bottom: 2px solid #ccc;
 }
 
 .logo {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bolder;
     color: #ff9831;
 }
 
@@ -40,7 +44,8 @@ body {
 
 .search-container input {
     padding: 5px;
-    width: 300px;
+    width: 80%; /* Make it responsive */
+    max-width: 300px; /* Limit the max width */
     border: 1px solid #ccc;
     border-radius: 4px;
 }
@@ -57,21 +62,24 @@ body {
 
 .search-container button:hover {
     background-color: #bf0000;
+    cursor: url(youtube-black.png), pointer;
 }
 
 /* Navigation Icons */
 
 .navigation {
     display: flex;
-    padding-left: 20%;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 38px 0;
     gap: 10px;
 }
 .navigation button {
     border-radius: 25px;
     background: #ff3131;
-    padding: 20px;
+    padding: 10px 15px;
+    margin: 5px;
+    flex: 1 1 120px;
     width: 120px;
     height: 80px;
     text-align: center;
@@ -81,24 +89,36 @@ body {
 }
 
 .titleCards {
-    padding-left: 60px;
+    /*padding-left: 60px;
     column-gap: 20px;
-    row-gap: 20px;
+    row-gap: 20px;*/
+    gap: 300px;
+    padding: 16px;
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
 }
 
 .titleCards img {
-    max-width: 400px;
+    max-width: 200px; /* Set a specific max-width for larger icons */
+    height: auto;
+
+    display: block; /* Ensures centering */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.titleCards img:hover {
+    cursor: url(youtube-black.png), pointer;
 }
 
 /* Main Content */
 .hidden {
     display: none;
     margin: 20px;
-    background-color: #f9f9f9; /* Light background for readability */
+    background-color: #ffd3a7; /* Light background for readability */
     border-radius: 8px;
     border: 1px solid #ccc;
+    padding: 20px;
     font-size: 16px;
     line-height: 1.6;
     color: #333; /* Dark text for readability */
@@ -116,6 +136,7 @@ body {
 .hidden p {
     margin-bottom: 15px;
     padding: 20px;
+    font-weight: bolder;
 }
 
 /* Image Content */
@@ -133,14 +154,32 @@ body {
 /* Button Style */
 button {
     background-color: #4caf50;
-    color: white;
+    color: black;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 15px;
+    font-weight: bolder;
 }
 
 button:hover {
     background-color: #45a049;
+    cursor: url(youtube-black.png), pointer;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+    .masthead {
+        padding: 5px;
+    }
+
+    .search-container input {
+        width: 90%; /* Make input take more space on smaller screens */
+    }
+
+    .navigation button {
+        padding: 8px 10px;
+        font-size: 14px; /* Smaller font size on mobile */
+    }
 }
