@@ -139,7 +139,7 @@ body {
     font-weight: bolder;
 }
 
-/* Image Content */
+/* Data Vis Content */
 .data-vis-img {
     display: none;
 }
@@ -149,6 +149,49 @@ body {
 }
 #dataVisInt1 {
     padding: 20px;
+}
+
+/*TypeWriter Effect from css-tricks.com*/
+
+.data-exp-1 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid #ff9831; /* The typwriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.12em;
+    animation:
+        typing 6s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
+
+.data-exp-2 {
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.12em solid #ff9831; /* The typwriter cursor */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em;
+    animation:
+        typing 6s steps(40, end),
+        blink-caret 1s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+    from,
+    to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: orange;
+    }
 }
 
 /* Button Style */
