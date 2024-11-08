@@ -32,11 +32,14 @@ function showTitleCards() {
     });
 }
 
+//button function for data analysis visuals
+
 function openDataRepo() {
     document.querySelectorAll(".data-vis-img").forEach((image) => {
         image.style.display = "block";
     });
 }
+
 // very unimportant but fun search button function. Source: ChatGPT
 function performSearch() {
     const query = document.getElementById("search").value;
