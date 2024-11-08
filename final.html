@@ -186,8 +186,44 @@
                     data, we created two visualizations showing the distribution of video runtimes for each age group
                     and the distribution of videos by category for each age group.
                 </p>
-                <button onclick="openDataRepo()">View Data Repository</button>
+            </section>
+
+            <!-- Section: Data Analysis -->
+            <section id="data-analysis" class="hidden">
+                <h2>Data Analysis</h2>
+                <div id="data-visualization">Click the button below to see Data Analyses and Explanations :)</div>
+
+                <button onclick="openDataRepo()">View Data Repository</button> <br />
+                <br />
+                <!--Runtime Explanation and Data Vis-->
                 <img src="kenneths-data-vis-jpg.jpg" alt="Length of Reccommended Videos per Age" class="data-vis-img" />
+                <embed
+                    type="text/html"
+                    title="dataVis2"
+                    src="run_time_interactive_html.html"
+                    width="800"
+                    height="600"
+                    class="data-vis-img"
+                    id="dataVisInt1" />
+                <br />
+                <br />
+                <p class="data-exp-1">
+                    The histogram above shows little difference in the length of videos being shown to each age group.
+                    The excess videos from the preschool age group can mainly be attributed to the significantly larger
+                    dataset of videos from this age group. It is also unsurprising that the majority of videos fall
+                    within the 0-0.199 hours (0-20 minutes) bucket of the histogram. From our own experiences on
+                    YouTube, most of the content we consume is under 20 minutes in length. What is surprising about
+                    these histograms is their modality. Intuitively, we expected a unimodal right-skewed histogram where
+                    most of the videos are shorter and there are fewer and fewer videos that have longer and longer
+                    runtimes. Instead, these histograms display bimodal distributions, where there is a peak in videos
+                    that are ~4 hours long. While this peak is nowhere near the peak of videos under 20 minutes long,
+                    it’s a little disturbing to think that there are a significant number of videos being recommended to
+                    children that are hours long.
+                </p>
+                <br />
+                <br />
+
+                <!--Categories Explanation and Data Vis-->
                 <img src="kenneths-data-vis-2.jpg" alt="Categorized Videos for Each Age" class="data-vis-img" />
                 <embed
                     type="text/html"
@@ -197,21 +233,18 @@
                     height="600"
                     class="data-vis-img"
                     id="dataVisInt0" />
-                <embed
-                    type="text/html"
-                    title="dataVis2"
-                    src="run_time_interactive_html.html"
-                    width="800"
-                    height="600"
-                    class="data-vis-img"
-                    id="dataVisInt1" />
-            </section>
+                <br />
+                <br />
 
-            <!-- Section: Data Analysis -->
-            <section id="data-analysis" class="hidden">
-                <h2>Data Analysis</h2>
-                <div id="data-visualization">Data visualizations would go here.</div>
-                <p>Interpretation of the findings in relation to content types, engagement, etc.</p>
+                <p class="data-exp-2">
+                    There are some slight differences in the type of video that is shown to each of the different age
+                    groups. Younger children are shown fewer videos in the other category that we might label as brain
+                    rot and more educational content. On the other hand, there is no distinct trend when it comes to
+                    children’s shows and music/dance videos. Under finer analysis, we would expect the specific videos
+                    in these categories to be different.
+                </p>
+                <br />
+                <br />
             </section>
 
             <!-- Section: Discussion -->
