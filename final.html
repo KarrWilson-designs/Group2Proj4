@@ -16,7 +16,7 @@
     <body>
         <!-- Masthead Navigation -->
         <header class="masthead">
-            <div class="logo">YouTube Kids Research</div>
+            <div class="logo" onclick="showTitleCards()">YouTube Kids Research</div>
             <div class="search-container">
                 <input type="text" id="search" placeholder="This is purely for aesthetics..." />
                 <button onclick="performSearch()">Search</button>
@@ -42,22 +42,30 @@
         <!--Title Cards-->
         <section class="titleCards">
             <div class="mainBits">
-                <img src="sectionIMG/1.png" class="intro" onclick="showDiv('intro')" />
+                <img src="sectionIMG/1.png" class="intro" onclick="showDiv('intro')" alt="intro" />
             </div>
             <div class="mainBits">
-                <img src="sectionImg/2.png" class="lit-review" onclick="showDiv('lit-review')" />
+                <img src="sectionIMG/2.png" class="lit-review" onclick="showDiv('lit-review')" alt="lit-review" />
             </div>
             <div class="mainBits">
-                <img src="sectionImg/3.png" class="data-collection" onclick="showDiv('data-collection')" />
+                <img
+                    src="sectionIMG/3.png"
+                    class="data-collection"
+                    onclick="showDiv('data-collection')"
+                    alt="data-collection" />
             </div>
             <div class="mainBits">
-                <img src="sectionImg/4.png" class="data-analysis" onclick="showDiv('data-analysis')" />
+                <img
+                    src="sectionIMG/4.png"
+                    class="data-analysis"
+                    onclick="showDiv('data-analysis')"
+                    alt="data-analysis" />
             </div>
             <div class="mainBits">
-                <img src="sectionImg/5.png" class="discussion" onclick="showDiv('discussion')" />
+                <img src="sectionIMG/5.png" class="discussion" onclick="showDiv('discussion')" alt="discussion" />
             </div>
             <div class="mainBits">
-                <img src="sectionImg/6.png" class="conclusion" onclick="showDiv('conclusion')" />
+                <img src="sectionIMG/6.png" class="conclusion" onclick="showDiv('conclusion')" alt="conclusion" />
             </div>
         </section>
 
